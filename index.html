@@ -6,15 +6,12 @@
     <title>Via CEP</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2?family= Open+Sans:wght@400;700 & display= swap " rel="stylesheet">
 
 </head>
 <body>
     <header class="nav-container">
         <nav class="nav-main">
-            <h1>DSViaCEP</h1>
+            <h1 id="reload-page">DSViaCEP</h1>
             <div class="contact-link">Contato</div>
         </nav>
     </header>
@@ -26,16 +23,16 @@
                     <div class="form-control">
                         <label for="cep">CEP:</label>
                         <input name="cep" id="cep" class="form-input" type="text" placeholder="CEP">
-                        <div class="error-massage">Campo requerido</div>
+                        <div class="error-massage" data-error="cep"></div>
                     </div>
                     <div class="form-control">
                         <label for="street">Logradouro:</label>
-                        <input name="street" id="street" class="form-input" type="text" placeholder="Logradouro" disabled>
+                        <input name="street" id="street" class="form-input" type="text" placeholder="Endereço" disabled>
                     </div>
                     <div class="form-control">
                         <label for="number">Número:</label>
                         <input name="number" id="number" class="form-input" type="text" placeholder="Número">
-                        <div class="error-massage">Campo requerido</div>
+                        <div class="error-massage" data-error="number"></div>
                     </div>
                     <div class="form-control">
                         <label for="city">Cidade:</label>
@@ -43,26 +40,28 @@
                     </div>
 
                     <div class="btn-container">
-                        <button class="btn btn-left" type="submit">Salvar</button>
-                        <button class="btn btn-rigth">Limpar</button>
+                        <button name="btnSave" class="btn btn-left" type="submit">Salvar</button>
+                        <button name="btnClear" class="btn btn-rigth">Limpar</button>
                     </div>
                 </form>
                 
             </div>
         </section>
 
-        <section id="list-section" class="list-container">
-            <div class="card-list-item">
-                <h3>São Paulo</h3>
-                <p class="address-line">Rua dos Jardins, 720</p>
-                <p class="address-cep">11200-345</p>
-            </div>
-            <div class="card-list-item">
-                <h3>São Paulo</h3>
-                <p class="address-line">Rua dos Jardins, 720</p>
-                <p class="address-cep">11200-345</p>
-            </div>
-        </section>
+        <section id="list-section" class="list-container"></section>
     </main>
+
+    <section id="modal-contact" class="modal-container">
+        <div class="modal-box">
+            <div class="modal-content">
+                <a href="https://www.instagram.com/__duuarte__/" target="_blank">Instagram: @__duarte__</a>
+                <a href="https://www.linkedin.com/in/nicolas-duarte-dev/" target="_blank">LinkedIn: @nicolas duarte</a>
+                <a href="https://github.com/NicoProgramador" target="_blank">GitHub: @NicoProgramador</a>
+            </div>
+            <button id="modal-contact-close" class="btn">Fechar</button>
+        </div>
+    </section>
+
+    <script type="module" src="JS/main.js"></script>
 </body>
 </html>
