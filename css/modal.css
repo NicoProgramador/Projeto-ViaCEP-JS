@@ -32,7 +32,7 @@
     margin-bottom: 20px; 
 }
 
-.modal-content a {
+.modal-content p {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -40,4 +40,5 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
+    cursor: pointer;
 }
